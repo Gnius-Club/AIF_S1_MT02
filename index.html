@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook: Sesión 2 - 1ro Secundaria</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S1-TM2</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 2 - 1ro Secundaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 2 - 1o de Secundaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,251 +38,406 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: El Croquis Inteligente</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de aprendizaje:</strong>
-                                    <ul>
-                                        <li>Que los estudiantes aprendan los fundamentos de la creación de un <strong>croquis 2D</strong> en <strong>Onshape</strong>.</li>
-                                        <li>Que comprendan la importancia de las <strong>dimensiones</strong> y <strong>restricciones</strong> para lograr un diseño robusto.</li>
-                                        <li>Que inicien la creación del <strong>croquis 2D</strong> de su proyecto personal, utilizando la metodología "<strong>Dupla Dinámica</strong>".</li>
-                                        <li><strong>Objetivo general de la sesión:</strong> Que los estudiantes inicien su primer diseño en Onshape creando un croquis 2D básico, aprendiendo a consultar a su equipo de IA para obtener orientación estratégica y técnica.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong>Actividad 1:</strong> Saludo de IA y Contexto (3 min)</li>
-                                        <li><strong>Actividad 2:</strong> "I Can Statement" y Presentación del Desafío (7 min)</li>
-                                        <li><strong>Actividad 3:</strong> Onshape AI Advisor (Estrategia de Diseño y Consulta Técnica) (15 min)</li>
-                                        <li><strong>Actividad 4:</strong> Brain Spark (Creación del Croquis 2D Inicial) (15 min)</li>
-                                        <li><strong>Actividad 5:</strong> Gnius STORM (Cierre de Sesión) (5 min)</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un <strong>croquis 2D</strong> inicial en Onshape, con sus formas geométricas básicas sin definir (<strong>líneas azules</strong>).</li>
-                                        <li>El <strong>croquis</strong> debe estar nombrado de forma descriptiva (ej: "Croquis Base - Organizador").</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Presentación de la sesión (10 Diapositivas).</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Cuentas de Onshape para cada alumno.</li>
-                                        <li>Chat "Agente Gnius" (Xolo) activo y funcionando.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna):</strong>
-                                            <ul>
-                                                <li>Asegurar que TODOS los estudiantes tengan una cuenta de Onshape creada y hayan iniciado sesión al menos una vez antes de esta clase.</li>
-                                                <li>Verificar conexión a internet, acceso a Onshape y funcionamiento de Xolo.</li>
-                                                <li>Tener las diapositivas listas.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización:</strong> Revisar el concepto de "croquis robusto" y el ciclo de consulta "Duda -> Advisor -> Biblioteca -> Aplicación".</li>
-                                        <li><strong>Preparación de Ejemplos:</strong> Tener un archivo de Onshape preparado para demostrar visualmente la diferencia entre un croquis con líneas azules (que se deforma al arrastrar) y uno con líneas negras (que mantiene su intención).</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar Onshape para la creación de croquis 2D y comprender la abstracción geométrica y la relación forma-función.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame qué es un croquis 2D y por qué es la base de todo diseño paramétrico. Analicemos cómo pasar de un brief visual a una forma geométrica inicial. Guíame paso a paso para comprender el rol de los asistentes de IA como apoyo técnico y estratégico durante el diseño.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Abstracción geométrica: Es simplificar objetos reales en formas básicas como círculos o rectángulos para poder diseñarlos digitalmente.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar herramientas de dibujo digital para crear formas en un plano 2D.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes formas geométricas básicas para entender limitaciones en la representación de ideas.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Computadoras (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a Onshape (https://www.onshape.com/)</label>
+                        <label><input type="checkbox"> Brief visual del proyecto (bosquejo en papel o imagen)</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa diseño CAD en Onshape</label>
+                        <label><input type="checkbox"> 📋 Inicio en Onshape: Crear un nuevo "Document" y seleccionar un plano de trabajo (Front, Top o Right).</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> No aplica hardware físico, mantén tu espacio de trabajo limpio y cuida tu computadora.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre abstracción geométrica y croquis 2D (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si Onshape no carga:</strong> Verificar la conexión a internet y refrescar el navegador. Asegurarse de haber iniciado sesión correctamente.</li>
+                            <li><strong>Si no encuentras una herramienta:</strong> Pregunta a XOLO por el nombre exacto de la herramienta de croquis que necesitas (Line, Circle, Rectangle).</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
-                <p>Establecer un tono profesional, introducir el tema del día y guiar a los estudiantes en la activación de la sesión con el chatbot Xolo.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto de la Misión ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) Introduce el objetivo de la misión: pasar de la visión conceptual a la ejecución geométrica.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Muy bien. Ya tienen su <strong>brief</strong> y su <strong>visión</strong>. Es hora de pasar del <strong>concepto</strong> a la <strong>geometría</strong>. Hoy entra en juego su <strong>consultor técnico</strong>, el <strong>Onshape AI Advisor</strong>. El Rol de <strong>Xolo</strong> será guiar su <strong>estrategia de diseño</strong>, mientras que el Advisor responderá sus dudas técnicas. Aprender a diferenciar nuestras funciones es clave para su eficiencia.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                      <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación de la IA ⏰ 2 minutos</h3>
-                            <p>Guía a los alumnos para que inicien su sesión de trabajo con Xolo, reforzando la rutina de la "Dupla Dinámica".</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Para comenzar, inicien su sesión en el chat con Xolo. Escriban <strong>'Hola Xolo, listo para la Misión 2'</strong> junto con su nombre, perfil de aprendizaje (Piloto, Ingeniero, etc.) y sus intereses. Esperen su confirmación para continuar.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos forma digital a sus ideas más creativas".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre abstracción geométrica y diseño en 2D.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A crear croquis en 2D para que sus ideas se conviertan en diseños reales.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros y diseñadores industriales en empresas de tecnología usan esta tecnología para prototipar productos antes de fabricarlos.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 7 minutos</h2>
-                <p>Definir claramente los objetivos de aprendizaje y presentar el desafío técnico de crear un "croquis robusto".</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Presentación del Concepto y el Desafío ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Presenta Onshape por primera vez y explica el concepto de un "croquis robusto".</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Hoy abrimos <strong>Onshape</strong> por primera vez. Puede parecer abrumador, pero no se preocupen. No necesitan saberlo todo, sino aprender a encontrar la información que necesitan. <strong>Onshape</strong> es la herramienta; su <strong>brief</strong> es el plan. Un buen <strong>croquis</strong> no es un simple dibujo, es una '<strong>intención</strong>' definida por <strong>reglas</strong>. Si cambian una medida, el resto debe comportarse de forma predecible. A esto se le llama un '<strong>croquis robusto</strong>'. Su misión hoy es empezar a construir ese <strong>croquis</strong>, no terminarlo.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Declaración del "I Can Statement" ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 4) Presenta el objetivo de aprendizaje concreto de la sesión.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo transformar una idea visual en un croquis 2D usando formas básicas.</li>
+                            <li>Introduce el concepto de abstracción geométrica como base del diseño industrial.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar Onshape para crear dibujos técnicos iniciales.</li>
+                            <li>Aprender sobre la relación entre la forma de un objeto y su función.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">El objetivo de hoy es muy específico. Al finalizar esta sesión, podrán decir: <strong>'Yo puedo crear las formas básicas de un croquis 2D en Onshape y sé cómo preguntar al Onshape AI Advisor sobre herramientas específicas para construirlo.'</strong></p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar Onshape para crear croquis y entender la abstracción geométrica.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a dar el primer paso en el mundo del diseño profesional. Abran su chat con XOLO y simplemente salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre cómo convertir una idea en un dibujo técnico. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él les explicará qué es un croquis 2D y por qué es tan importante. Aprovechen para preguntarle todo lo que no entiendan sobre cómo las formas geométricas básicas construyen objetos complejos.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: Onshape AI Advisor (Estrategia de Diseño y Consulta Técnica) ⏰ 15 minutos</h2>
-                <p>Fase de diálogo individual con Xolo para simplificar el diseño y aprender el flujo de consulta técnica.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción para la Consulta Estratégica ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 5) Guía a los estudiantes para que consulten a Xolo sobre cómo simplificar su diseño a una forma 2D.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, abran <strong>Onshape</strong>. Hagan clic en '<strong>Crear</strong>' y luego en '<strong>Documento</strong>'. Nombren su proyecto. Una vez dentro, seleccionen el plano '<strong>Frontal</strong>' y hagan clic en el ícono de '<strong>Sketch</strong>'. Ahora están listos para dibujar. Busquen el ícono del <strong>Onshape AI Advisor</strong> en la barra lateral para empezar a consultar. Miren su <strong>brief</strong> y el <strong>moodboard</strong> de su proyecto. Olviden los detalles. Su tarea ahora es consultar a Xolo. Pregúntenle: <strong>“Xolo, este es mi proyecto [describe brevemente tu idea]. ¿Cuál sería la forma 2D más adecuada para comenzar mi diseño en Onshape? ¿Podrías mostrarme cómo usar la herramienta ‘corner rectangle’ y explicarme qué es un croquis?”</strong> Piensen en 2D, no en 3D. Lean su consejo estratégico.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Profundización en el Flujo de Consulta Técnica ⏰ 10 minutos</h3>
-                            <p>(Proyectar Diapositiva 6) Explica y modela el ciclo completo de aprendizaje técnico: Duda -> Consulta al Advisor -> Visualización en Biblioteca -> Aplicación.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los computadoras conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique la abstracción geométrica en un diseño.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar herramientas de croquis en Onshape.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Configurar su plano de trabajo en Onshape y probar su diseño.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a transformar mi brief en un primer croquis 2D en Onshape. Quiero decidir la forma inicial más adecuada para mi proyecto y justificarla. Guíame para crear un croquis limpio y funcional que represente correctamente mi idea."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Excelente. Xolo les ha dado la <strong>estrategia</strong> y una introducción a la <strong>técnica</strong>. Ahora, deben profundizar usando el <strong>Onshape AI Advisor</strong>. Si tienen más dudas sobre otras herramientas o pasos, pregúntenle directamente. Por ejemplo, podrían preguntar 'How to use the circle tool?'. Si la respuesta de texto no es clara, su siguiente paso es ir a la <strong>Biblioteca de Técnicas Esenciales</strong>, buscar el video correspondiente, verlo y luego aplicarlo en <strong>Onshape</strong>. Este <strong>ciclo</strong> es la clave del aprendizaje autónomo.</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El croquis representa fielmente tu idea inicial?</li>
+                            <li>¿Qué pasa si intentas usar solo una figura geométrica para todo el diseño?</li>
+                            <li>¿Funciona igual el diseño si cambias las dimensiones del croquis?</li>
+                            <li>¿Cómo ayuda la abstracción geométrica a que tu diseño sea más funcional?</li>
+                            <li>En este proceso, ¿qué decisiones tomaste tú y en qué te ayudó la IA de XOLO?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a pasar de la teoría a la acción. El flujo es sencillo: platiquen su idea con XOLO, definan el 'VIBE' de su proyecto y dejen que él les dé el GCS (Guía de Construcción Paso a Paso). Con esa guía, abran Onshape y empiecen a dibujar su croquis. Por ejemplo, podrían diseñar la base de un gadget tecnológico o un accesorio funcional. No olviden las preguntas de experimentación mientras diseñan. Si tienen errores o dudas al usar las herramientas de Onshape, pregúntenle a XOLO, él los ayudará a depurar su diseño.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con un croquis básico. ¿Puedes enseñarme cómo hacer que mi diseño incluya restricciones geométricas (constraints) para que sea más profesional?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark (Creación del Croquis 2D Inicial) ⏰ 15 minutos</h2>
-                <p>Fase de trabajo práctico e individual donde los estudiantes inician su croquis 2D, aplicando la metodología de consulta de la Dupla Dinámica.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Ejecución Técnica Aumentada ⏰ 15 minutos</h3>
-                            <p>(Proyectar Diapositiva 7) Los estudiantes trabajan de forma autónoma en Onshape para crear la primera versión de su croquis.</p>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué formas geométricas funcionan bien en su diseño.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué figuras geométricas representan mejor tu idea? ¿Qué te sorprendió de simplificar tu diseño?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, al Brain Spark. Tienen 15 minutos para el trabajo individual. Abran <strong>Onshape</strong> y comiencen a crear las formas básicas de su <strong>croquis</strong>. Recuerden el ciclo: si tienen una duda técnica, consulten primero al <strong>Onshape AI Advisor</strong>. Si necesitan visualizarlo, vayan a la <strong>Biblioteca de Técnicas</strong>. El objetivo no es terminar, sino empezar. Al final, su croquis tendrá <strong>líneas azules</strong>, y eso está perfecto. Nombren su croquis de forma descriptiva, como 'Croquis Base - Organizador'. Comiencen.</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi diseño usa círculos y rectángulos. Me sorprendió que la abstracción facilita mucho el dibujo técnico."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM (Cierre de Sesión) ⏰ 5 minutos</h2>
-                <p>Fase final para compartir el proceso de aprendizaje y reflexionar sobre la experiencia de la Dupla Dinámica.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Think (Reflexión Individual) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 8) Guía una reflexión silenciosa e individual sobre el proceso de aprendizaje.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">
-                                     Tiempo. Detengan el trabajo. Antes de compartir, reflexionen 60 segundos sobre el proceso: <strong>¿Qué pregunta específica le hicieron al Onshape AI Advisor? ¿Qué video de la Biblioteca les fue más útil? ¿En qué se diferenció la ayuda de Xolo de la del Advisor?</strong>
-                                </p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Pair (Discusión en Parejas) ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Los estudiantes comparten su pantalla y sus reflexiones en parejas.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">
-                                    Ahora, en parejas. Compartan sus pantallas mostrando su <strong>croquis</strong> con <strong>líneas azules</strong>. Expliquen a su compañero sus respuestas a las preguntas de la reflexión. Concéntrense en el proceso de cómo obtuvieron la información.
-                                </p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Share (Síntesis y Cierre) ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 10) Recoge impresiones y cierra con la consolidación de Xolo sobre el trabajo realizado.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">
-                                    Volvemos al grupo. ¿Algún voluntario que quiera compartir una pregunta interesante que le hizo al <strong>Advisor</strong>? (Escucha 1-2 respuestas). Excelente. Para cerrar la misión, Xolo nos deja esta síntesis:
-                                </p>
-                                <p class="dialogue assistant">
-                                    <strong>Xolo concluye la sesión con esta reflexión:</strong> "Han creado la <strong>intención geométrica</strong> de su diseño. Las líneas son <strong>azules</strong> porque aún no tienen <strong>reglas</strong>. Son libres, pero también impredecibles. En nuestra próxima misión, las anclaremos con <strong>dimensiones</strong> y <strong>restricciones</strong> para hacerlas <strong>robustas</strong> e <strong>inteligentes</strong>. Han aprendido a usar a su equipo de consultores. Es un gran avance."
-                                </p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
